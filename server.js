@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://ministore-tracker.vercel.app"],
+    origin: ["http://localhost:5173", "https://mini-store-tracker-frontend.vercel.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: ["Content-Type"],
   }),
