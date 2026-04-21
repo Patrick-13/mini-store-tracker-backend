@@ -7,7 +7,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://mini-store-tracker-frontend.vercel.app"],
+    origin: ["https://mini-store-tracker-frontend.vercel.app"],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: ["Content-Type"],
   }),
@@ -59,4 +59,8 @@ app.delete("/income/:id", async (req, res) => {
   res.json({ message: "Deleted" });
 });
 
-app.listen(5001, () => console.log("Server running on port 5001"));
+const PORT = process.env.PORT || 5001;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
