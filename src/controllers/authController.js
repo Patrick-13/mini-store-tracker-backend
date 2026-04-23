@@ -2,7 +2,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const generateToken = require("../utils/generateToken");
-const AppError = require("../utils/AppError");
+const AppError = require("../utils/appError");
 const asyncHandler = require("../middleware/asyncHandler");
 
 exports.register = asyncHandler(async (req, res) => {
