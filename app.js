@@ -1,9 +1,10 @@
 // src/app.js
 const express = require("express");
 const cors = require("cors");
-
+const errorHandler = require("./middleware/errorHandler");
 const authRoutes = require("./src/routes/authRoute");
 const incomeRoutes = require("./src/routes/incomeRoute");
+const transactionRoutes = require("./src/routes/transactionRoute");
 
 const app = express();
 
@@ -28,5 +29,8 @@ app.use((req, res, next) => {
 // routes
 app.use("/auth", authRoutes);
 app.use("/income", incomeRoutes);
+app.use("/transaction", transactionRoutes);
+
+app.use(errorHandler);
 
 module.exports = app;
