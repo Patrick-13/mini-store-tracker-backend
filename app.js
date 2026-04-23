@@ -1,7 +1,7 @@
 // src/app.js
 const express = require("express");
 const cors = require("cors");
-const errorHandler = require("./middleware/errorHandler");
+const errorHandler = require("./src/middleware/errorHandler");
 const authRoutes = require("./src/routes/authRoute");
 const incomeRoutes = require("./src/routes/incomeRoute");
 const transactionRoutes = require("./src/routes/transactionRoute");
